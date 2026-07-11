@@ -1,0 +1,5 @@
+Juan,25,Bogotá
+María,30,Medellín
+Carlos,35,Bogotá
+Ana,28,Cali
+Pedro,40,Medellín
