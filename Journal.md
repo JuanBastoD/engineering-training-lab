@@ -31,7 +31,7 @@ El problema no fue sintaxis — fue lógica de flujo. Una vez que entendí qué 
 D2: lectura de archivos, parseo, manejo de errores.
 
 
-## Día 2 — Fase 0, Ejercicio D2
+## Día 1 — Fase 0, Ejercicio D2
 
 **Fecha:** [10/07/2026]
 **Tiempo total:** 50 minutos 
@@ -61,3 +61,43 @@ El problema fue sobre todo como abrir los archivos, asignar los valores a una li
 
 ### Siguiente paso
 D3: validar si una cadena con ()[]{} está balanceada.
+
+## Día 2 — Fase 0, Ejercicio D3
+
+**Fecha:** [12/07/2026]
+**Tiempo total:** 63 minutios 17 segundos 
+**Ejecuciones fallidas:** 10 (+7 de lógica)
+**Veredicto:** Aprobado
+
+### Qué aprendí
+- Estructura de datos: pila (stack) y cómo funciona (append() y pop())
+- Cómo una pila resuelve problemas de orden/pareja (matching)
+- Diferencia entre llamar una función y usar su valor devuelto
+- Indexación negativa en strings/listas ([-1] para el último elemento)
+- Importancia de validar estado antes de operaciones destructivas (pop() en lista vacía)
+- Lógica de devoluciones en funciones anidadas
+
+
+
+### Errores cometidos
+1. Append antes de validar: metía el carácter en el stack antes de saber si era apertura o cierre
+2. Ignorar valores devueltos: llamaba vacio(stack) pero no usaba el True/False que devolvía
+3. Lógica invertida: devolvía False cuando debería devolver True (confundí el sentido)
+4. No verificar al final: no validaba si el stack quedaba vacío después del bucle
+5. Función incompleta: vacio() no devolvía nada en el caso falso (devolvía None implícitamente)
+
+
+### Qué investigué
+- Stack/pila en documentación oficial
+- Métodos .pop() y .append() en listas
+- Indexación negativa
+- Funciones que devuelven valores y cómo usarlos
+- ~15 min de documentación + experimentación en intérprete
+
+### Reflexión
+Los dos primeros ejercicios fueron sobre como hacer tal cosa en python, este D3 fue como pensar en un algoritmo . Luego que entendí que pila es ultimo en entrar primero en salir pude relacionarlo con brackets balanceados o sea que el ultimo que abrí debe ser el primero en cerrar. 
+
+Fue frustrante hacer que todos los casos pasaran correctamente(18 ejecuciones), el orden importa, las funciones devuelven valores y estos deben utilizarse y debo validar el estado antes de hacer operaciones peligrosas (pop) .Son principios, no sintaxis
+
+### Siguiente paso
+Fase 1: Python básico sin IA. Entrenamiento de fluidez en variables, bucles, funciones, archivos.
