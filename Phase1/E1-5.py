@@ -13,14 +13,12 @@ def contar_digitos(num):
     letras = str(absoluto)
     digitos = {}
     for letra in letras:
-        if letra not in digitos:
-            digitos[letra]=1
-        else:
-            digitos[letra]+=1
+        entero= int(letra)
+        digitos[entero] = digitos.get(entero,0) +1
     return digitos
 
-print(contar_digitos(112233)) #→ {1: 2, 2: 2, 3: 2}
-print(contar_digitos(1000)) #→ {1: 1, 0: 3}
-print(contar_digitos(555)) #→ {5: 3}
-print(contar_digitos(-1234)) #→ {1: 1, 2: 1, 3: 1, 4: 1}
-print(contar_digitos(0)) #→ {0: 1}
+print(contar_digitos(112233))
+print(contar_digitos(1000))
+print(contar_digitos(555))
+print(contar_digitos(-1234))
+print(contar_digitos(0))
