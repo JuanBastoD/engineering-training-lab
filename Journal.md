@@ -66,7 +66,7 @@ D3: validar si una cadena con ()[]{} está balanceada.
 
 **Fecha:** [12/07/2026]
 **Tiempo total:** 63 minutios 17 segundos 
-**Ejecuciones fallidas:** 10 (+7 de lógica)
+**Ejecuciones fallidas:** 10 +7 de lógica
 **Veredicto:** Aprobado
 
 ### Qué aprendí
