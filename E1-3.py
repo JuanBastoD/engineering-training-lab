@@ -7,7 +7,7 @@ función que devuelva el máximo común divisor (MCD) de dos números usando el 
 #       temp = b
 #       b = a % b
 #       a = temp
-#     devuelve b
+#     devuelve a
 
 def maximo_comun_divisor(x,y):
     while y != 0:
