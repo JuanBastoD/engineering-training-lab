@@ -3,10 +3,7 @@ función que reciba un número y devuelva True si es una edad válida (entre 0 y
 """
 def es_edad_valida (edad):
     try:
-        if edad>=0 and edad<=120:
-            return True
-        else:
-            return False
+        return edad>=0 and edad<=120
     except:
         return False
 
