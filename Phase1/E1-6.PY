@@ -10,26 +10,24 @@
 investigue: .islower .isupper y busque si la forma correcta de comparar strings era con == pero no encontre lo que buscaba
 """
 
-def validar_contrasena(pasword):
+def validar_contrasena(password):
     mayus = False
     minus = False
     digit = False
     special = False
     group = ['!','@','#','$','%','^','&','*']
-    if len(pasword)<8:
+    if len(password)<8:
         return False
     
-    for character in pasword:
-        for spe in group:
-            if character==spe:
-                special= True
+    for character in password:
         if character.islower():
             minus = True
         elif character.isupper():
             mayus = True
         elif character.isdigit():
             digit = True
-    
+        elif character in group:
+            special = True
     return mayus and minus and digit and special
 
 print(validar_contrasena("Abc123!@"))
