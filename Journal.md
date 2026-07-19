@@ -152,3 +152,42 @@ Fase 1: Python básico sin IA. Entrenamiento de fluidez en variables, bucles, fu
 **Sobre el error repetido de return/print (E1.1, y ya antes en D1):** 
 La primera vez no entendía la diferencia conceptual. Esta vez fue automatismo: seguí escribiendo `print()` por costumbre aunque ya sabía que debía usar `return`. La regla que me llevo: si una función no tiene su propio `print()`, el print va afuera, al llamarla — no adentro de la función. Voy a revisar esto 
 específicamente en el próximo ejercicio antes de dar por terminado el código, como un check final antes de entregar.
+
+## Día 4 — Fase 1 Ejercicios 6-10
+
+| **E** | **Tiempo** | **Ejecuciones** | **Veredicto** |
+| --- | --- | --- | --- |
+| E1.6 | 19 min 44 seg | 1 | Aprobado |
+| E1.7 | 47 min | ~11 | Aprobado |
+| E1.8 | 18 min 34 seg | 7 (sintaxis) | Aprobado |
+| E1.9 | 8 min 34 seg | 1 | Aprobado |
+| E1.10 | 10 min 25 seg | 7 | Aprobado |
+
+### Qué aprendí
+- Métodos de string: `.isupper()`, `.islower()`, `.isdigit()`, `.isalpha()`
+- Construcción de números dígito a dígito: `nuevo = (nuevo*base) + ultimo`
+- Manejo de signo con `abs()`: separar el valor absoluto del signo, aplicar el signo al final
+- Diferencia entre diccionario dinámico (`.get()`) y diccionario con claves fijas predefinidas
+- Algoritmo de Luhn: extracción de dígitos de derecha a izquierda, duplicación condicional, ajuste >9
+- A verificar cálculos manuales con cuidado antes de asumir que el código está mal — incluso cuando la fuente del enunciado parece confiable
+
+### Errores cometidos
+1. E1.7: bucle anidado que vaciaba `num` antes de poder extraer todos los dígitos — confundí "consumir el número" con "contar dígitos"
+2. E1.7: `%` y `//` con números negativos en Python producen resultados no intuitivos — causó bucle infinito hasta que usé `abs()`
+3. E1.8: intenté indexar el diccionario como si tuviera claves dinámicas (`vocales[letra]+=1`) sin haberlas creado — confundí el patrón de D2 con este caso, que necesitaba claves fijas
+4. E1.10: siete ejecuciones iniciales fueron errores de tipo (`int` no tiene `.len()`, `len()` no acepta `int`) — intenté aplicar una validación de longitud sin convertir a string primero
+
+### Qué investigué
+- Documentación oficial: `.isupper()`, `.islower()`, `.isdigit()`, `.isalpha()`
+- Comportamiento de `%` y `//` con operandos negativos en Python (experimentación en intérprete)
+- Algoritmo de Luhn (concepto matemático, no documentación de Python)
+
+### Reflexión
+*(Para escribir tú mismo — algunas preguntas guía, no las respondas todas, solo las que te resuenen:)*
+
+- En E1.10 sabia que el algoritmo estaba bien confiaba en mi logica y lo fui siguiendo mentalmente y en papel, no habia forma de que me estuviera equivcando y no tenia sentido invertir el orden de iteracion ni duplciar cuando la bandera posi fuera impar.
+
+- E1.7 demoré mucho tiempo porque no entendia como ordenar los digitos porque como lo estaba haciendo al comienzo extraia los numeros y los iba armando con una suma de forma que quedaba igual que el original, luego di con la forma logica pero no sabia como aplicarlo de manera que la base se aumentara, porque estaba multiplicando por 10 la base en cada iteracion pero esto era incorrecto, a pesar de ser pocas lineas estuve bastante tiempo probando y corrigiendo la logica, por ultimo saltó el error del numero negativo que no sabia que con el operador // los numeros negativos se redondean hacia abajo entonces debí hacer preguntas para darme cuenta que debia manejarlo como valor absoluto y multiplicarlo por -1 al final
+
+### Siguiente paso
+Fase 1 completada (E1.1–E1.10). Inicio de Fase 2: Programación Orientada a Objetos (clases, `__init__`, `self`, herencia).
